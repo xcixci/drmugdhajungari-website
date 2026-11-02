@@ -1,0 +1,9 @@
+[build]
+  publish = "site"
+  command = ""
+
+[[redirects]]
+  from = "https://drmugdhajungari.in/*"
+  to = "https://www.drmugdhajungari.in/:splat"
+  status = 301
+  force = true

@@ -1,7 +1,7 @@
 {
   "name": "Dr Mugdha Jungari",
   "short_name": "Dr Mugdha",
-  "icons": [{ "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" }],
+  "icons": [{ "src": "icon-512.png", "sizes": "512x512", "type": "image/png" }],
   "theme_color": "#FBF5F9",
   "background_color": "#FBF5F9",
   "display": "browser"

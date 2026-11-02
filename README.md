@@ -1,21 +1,26 @@
 # drmugdhajungari.in
 
 Website for Dr Mugdha Jungari and The Purple Women's Health Clinic, Nagpur.
-Plain HTML and CSS, no build step. Everything that goes live is in the `site/` folder.
+Plain HTML and CSS, no build step.
 
-## Publish on Netlify
+## How it is published (GitHub Pages)
 
-1. In Netlify: **Add new site → Import an existing project → GitHub** and pick this repo.
-2. Netlify reads `netlify.toml`, so the publish folder (`site`) is already set. No build command.
-3. **Domain management → Add a domain**: `www.drmugdhajungari.in` (and the bare domain, which redirects to www).
-4. At the domain registrar, point the DNS to Netlify as Netlify shows you. HTTPS switches on by itself.
-5. After it's live, add `https://www.drmugdhajungari.in/` as the website on her Google Business Profile.
+Everything that goes live is in the `docs/` folder. GitHub Pages publishes it from the `main` branch, `/docs` folder. Every push to `main` updates the site within a minute or two.
 
-Every push to `main` republishes the site automatically.
+**Review link (before the domain is switched):** https://xcixci.github.io/drmugdhajungari-website/
+
+**Switching to drmugdhajungari.in, after Dr Mugdha approves:**
+1. GitHub repo, Settings, Pages, Custom domain: `www.drmugdhajungari.in`, Save. (This adds a `CNAME` file in `docs/`.)
+2. At the domain registrar, set the DNS:
+   - `www`: CNAME to `xcixci.github.io`
+   - bare domain `@`: four A records, `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
+   - remove any old A or CNAME records pointing to Wix or elsewhere
+3. When GitHub shows the domain as verified, tick **Enforce HTTPS**.
+4. Add `https://www.drmugdhajungari.in/` as the website on her Google Business Profile.
 
 ## Things to fill in before launch
 
-All marked with comments in `site/index.html` (search for the capitalised word):
+All marked with comments in `docs/index.html` (search for the capitalised word):
 
 | Search for | What to do |
 |---|---|
@@ -51,11 +56,11 @@ Keep it that way when editing.
 
 ## Files
 
-- `site/index.html` – the page, including structured data (schema.org) that Google and AI tools read
-- `site/privacy.html`, `site/404.html`
-- `site/assets/css/site.css` – all styles
-- `site/assets/fonts/` – Gloock and Figtree, self-hosted
-- `site/assets/img/` – logo mark, BirthWise logo, photo, link-preview image
-- `site/robots.txt`, `site/sitemap.xml`, `site/_headers`
+- `docs/index.html` – the page, including structured data (schema.org) that Google and AI tools read
+- `docs/privacy.html`, `docs/404.html`
+- `docs/assets/css/site.css` – all styles
+- `docs/assets/fonts/` – Gloock and Figtree, self-hosted
+- `docs/assets/img/` – logo mark, BirthWise logo, photo, link-preview image
+- `docs/robots.txt`, `docs/sitemap.xml`
 
 Built by Arinjay Business Systems.
